@@ -1,0 +1,7 @@
+USE PeopleTracker;
+GO
+
+ALTER TABLE dbo.Invoice DROP CONSTRAINT DF_Invoice_DueDate
+
+ALTER TABLE Invoice 
+	ADD CONSTRAINT DF_Invoice_DueDate DEFAULT DATEADD(MONTH, 1, GETDATE()) FOR DueDate;

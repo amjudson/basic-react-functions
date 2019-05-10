@@ -1,0 +1,20 @@
+export default {
+  students: [],
+  student: {},
+  phones: [],
+  accounts: [],
+  states: [],
+  addresses: [],
+  addressTypes: [],
+  invoices: [],
+  totalInvoices: [],
+  persons: [],
+  person: {},
+  personTypes: [],
+  personCompletes: [],
+  errors: {},
+  datetime: {},
+  trigger: {},
+  startDate: new Date(),
+  ajaxCallsInProgress: 0
+};
