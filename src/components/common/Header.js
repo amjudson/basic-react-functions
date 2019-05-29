@@ -1,18 +1,10 @@
 import React, { PureComponent } from 'react';
-import Button from 'react-bootstrap/Button';
-import AuthClass from '../../authorization/authClass';
 
 class Header extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <header className='app-header navbar'>
-        <h3>
-          <strong>Component Testing Application</strong>
-        </h3>
+        <h3 className='ml-3'><strong>IRIS Support Tools</strong></h3>
       </header>
     );
   }

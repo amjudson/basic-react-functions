@@ -7,7 +7,9 @@ import spinnerGif from 'assets/JarSpinner.gif';
 import 'localcss/style.css';
 import Button from 'react-bootstrap/Button';
 import MessageModal from '../modals/messageModal';
+import Accordion from 'react-collapsy';
 import Url from 'url-parse';
+import 'react-collapsy/lib/index.css';
 
 class TestActions extends React.Component {
   constructor(props) {
@@ -97,8 +99,6 @@ class TestActions extends React.Component {
     const { startDate } = this.props;
 
     const url = new Url('https://iris.auth0.com/oauth/ro');
-    console.log('URL:', url);
-    console.log('Path Name:', url.pathname);
 
     const modalMessage = 'This is a test of the Message modal';
     const messageOk = 'Ok button status';
@@ -110,7 +110,6 @@ class TestActions extends React.Component {
       ? 'row alert alert-success'
       : 'row alert alert-danger';
 
-    console.log('show spinner:', this.state.showSpinner);
     let triggerEvent = 'The trigger is off';
     let eventClass = 'row alert alert-danger';
     let iconClass = <i className='fas fa-frown fa-3x' />;
@@ -184,6 +183,30 @@ class TestActions extends React.Component {
               Display Message Modal
             </Button>
           </div>
+        </div>
+        <div className='row'>
+          <Accordion title='Test number One'>
+            <div className='row'>
+              Row One
+            </div>
+            <div className='row'>
+              Row Two
+            </div>
+            <div className='row'>
+              Row Three
+            </div>
+          </Accordion>
+          <Accordion title='Test number two'>
+            <div className='row'>
+              Test Two Row One
+            </div>
+            <div className='row'>
+              Test Two Row Two
+            </div>
+            <div className='row'>
+              Test Two Row Three
+            </div>
+          </Accordion>
         </div>
         <div className='row'>
           <MessageModal

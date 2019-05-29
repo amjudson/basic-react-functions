@@ -2,11 +2,10 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import { connect } from 'react-redux';
 import dateTime from 'objects/dateTime';
-import { Row, Col, Button } from 'react-bootstrap';
 import { boundMethod } from 'autobind-decorator';
-//import DateTimePicker from 'react-datetime-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -17,7 +16,9 @@ class DateInput extends React.Component {
 
     this.state = {
       dateTime: dateTime,
-      date: new Date()
+      date: new Date(),
+      expanded: false,
+      disabled: false
     }
 
     //this.handleChange = this.handleChange.bind(this);
@@ -42,6 +43,11 @@ class DateInput extends React.Component {
       autoClose: 15000,
       position: toast.POSITION.TOP_CENTER
     });
+  }
+
+  @boundMethod
+  handleaccordion() {
+    return setState({ expanded: !this.state.expanded });
   }
 
   handleChangeDTP(date) {

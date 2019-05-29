@@ -14,9 +14,11 @@ import ImageZoom from './components/examples/ImageZoom';
 import Callback from './components/Callback';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@coreui/coreui/dist/css/coreui.min.css';
+import '@coreui/coreui-pro/dist/css/themes/coreui-dark.min.css';
 import '@fortawesome/fontawesome-pro/css/all.css'
 import '../src/css/style.css';
 import 'react-toastify/dist/ReactToastify.css';
+import ControlExample from './components/examples/ControlExample';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,6 +42,7 @@ class App extends React.Component {
               <Route path='/imagezoom' component={ImageZoom} />
               <Route path='/about' component={About} />
               <Route path='/callback' component={Callback} />
+              <Route path='/controlexample' component={ControlExample} />
               <Route component={PageNotFound} />
             </Switch>
           </main>

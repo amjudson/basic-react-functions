@@ -1,9 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import ModalBody from 'react-bootstrap/ModalBody';
-import spinnerGif from 'assets/CircleInCircleSmall.gif';
+import spinnerGif from 'assets/fingerSpinner.gif';
 
-class LoadSpinner extends PureComponent {
+class LoadSpinner extends Component {
   constructor(props, context) {
     super(props, context);
   }
@@ -16,8 +15,8 @@ class LoadSpinner extends PureComponent {
           <Modal
             show={show}
             onHide={onHide}
-            dialogClassName='transbox modal-no-background'>
-            <img className='transimg' src={spinnerGif} />
+            dialogClassName='modal-no-background'>
+            <img src={spinnerGif} />
           </Modal>
         </div>
       </div>

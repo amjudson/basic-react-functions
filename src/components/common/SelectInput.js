@@ -9,6 +9,7 @@ class SelectInput extends PureComponent {
       name,
       label,
       onChange,
+      onBlur,
       defaultOption,
       value,
       error,
@@ -29,11 +30,16 @@ class SelectInput extends PureComponent {
           name={name}
           value={value}
           onChange={onChange}
+          onBlur={onBlur}
         >
           <option key='0'>{defaultOption}</option>
           {options.map(option => {
+            let nkey = option.value;
+            if (option.key) {
+              nkey = option.key;
+            }
             return (
-              <option key={option.value} value={option.value}>
+              <option key={nkey} value={option.value}>
                 {option.text}
               </option>
             );
@@ -51,6 +57,7 @@ SelectInput.propTypes = {
   onChange: PropTypes.func.isRequired,
   defaultOption: PropTypes.string,
   value: PropTypes.string,
+  onBlur: PropTypes.func,
   error: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.object)
 };

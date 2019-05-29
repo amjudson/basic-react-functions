@@ -7,8 +7,8 @@ import {
   MenuItem,
   NavDropdown,
   Modal,
-	Jumbotron,
-	Dropdown
+  Jumbotron,
+  Dropdown
 } from 'react-bootstrap';
 import 'localcss/style.css';
 
@@ -65,7 +65,6 @@ class Navigation extends Component {
                   <i className='nav-icon far fa-smile' />
                   Dropdown Button
                 </Dropdown.Toggle>
-
                 <Dropdown.Menu>
                   <Dropdown.Item>
                     <Link to='/trigger'>
@@ -77,18 +76,23 @@ class Navigation extends Component {
             </li>
             <li className='dropdown-item'>
               <Link className='nav-link' to='/triggers'>
-                <i className='nav-icon far fa-smile' />Test Trigger
+                <i className='nav-icon fal fa-smile' />Test Trigger
+              </Link>
+            </li>
+            <li className='dropdown-item'>
+              <Link className='nav-link' to='/controlexample'>
+                <i className='nav-icon fal fa-gamepad' />Control Examples
               </Link>
             </li>
             <li className='nav-item'>
               <Link className='nav-link' to='/modals'>
-                <i className='nav-icon fas fa-brain' />
+                <i className='nav-icon fal fa-brain' />
                 Modal Test Set
               </Link>
             </li>
             <li className='nav-item'>
               <Link className='nav-link' to='/imagezoom'>
-                <i className='nav-icon fas fa-brain' />
+                <i className='nav-icon fal fa-brain' />
                 Image Zoom
               </Link>
             </li>
