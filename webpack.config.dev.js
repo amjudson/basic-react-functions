@@ -13,7 +13,6 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'eventsource-polyfill',
-    'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'src/index.js') // primary JS entry point
   ],
   target: 'web',
@@ -27,6 +26,9 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'src'),
     hot: true,
     port: 3030
+  },
+  node: {
+    fs: "empty"
   },
   plugins: [
     new webpack.DefinePlugin(GLOBALS),

@@ -6,11 +6,11 @@ import ErrorBoundary from './components/errors/ErrorBoundary';
 import store from './stores/configureStore';
 //import { ConnectedRouter as Router, routerMiddleware } from 'react-router-redux';
 import { Router } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import '../src/css/style.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/toastr/build/toastr.min.css';
 import AuthClass from './authorization/authClass';
+import dotenv from 'dotenv';
 
 const test = (
   <div>
@@ -18,14 +18,18 @@ const test = (
   </div>
 )
 
-const history = createHistory();
+dotenv.config();
+
+const history = createBrowserHistory();
 const node1 = document.getElementById('container');
 const body = (
+  <ErrorBoundary>
   <Provider store={store}>
     <Router history={history}>
-      <App store={store} />
+        <App store={store} />
     </Router>
   </Provider>
+  </ErrorBoundary>
 )
 
 

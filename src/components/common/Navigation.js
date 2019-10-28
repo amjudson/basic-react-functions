@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Nav,
-  Navbar,
-  NavItem,
-  MenuItem,
-  NavDropdown,
-  Modal,
-  Jumbotron,
-  Dropdown
-} from 'react-bootstrap';
 import 'localcss/style.css';
 
 class Navigation extends Component {
@@ -56,23 +46,6 @@ class Navigation extends Component {
                 Trigger
                 <span className='badge badge-primary'>old</span>
               </Link>
-            </li>
-            <li>
-              <Dropdown className='nav-link'>
-                <Dropdown.Toggle
-                  className='nav-link nav-no-border'
-                  id='dropdown-basic'>
-                  <i className='nav-icon far fa-smile' />
-                  Dropdown Button
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item>
-                    <Link to='/trigger'>
-                      <i className='nav-icon far fa-smile' /> Test Trigger
-                    </Link>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
             </li>
             <li className='dropdown-item'>
               <Link className='nav-link' to='/triggers'>

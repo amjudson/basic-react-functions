@@ -13,6 +13,17 @@ img.center-align {
   margin-right: auto;
 }
 
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
 .nav-toggle-no-stuff {
   line-height: 0em !important;
   margin: 0em !important;

@@ -14,7 +14,6 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'eventsource-polyfill',
-    'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'src', 'index.js') // primary JS entry point
   ],
   context: path.resolve(__dirname),
@@ -29,6 +28,9 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'src'),
     hot: true,
     port: constants.port
+  },
+  node: {
+    fs: "empty"
   },
   plugins: [
     new HtmlWebpackPlugin({

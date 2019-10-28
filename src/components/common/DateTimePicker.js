@@ -1,8 +1,7 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
+import { Col } from 'react-bootstrap';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 

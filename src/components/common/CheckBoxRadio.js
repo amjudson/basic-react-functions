@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Form, Col, FormCheck } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 class CheckBoxRadio extends PureComponent {
   render() {

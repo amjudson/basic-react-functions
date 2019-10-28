@@ -161,7 +161,7 @@ class TestActions extends React.Component {
           </button>
         </div>
         <div className='row'>
-          <div className='col-md-2 mt-2'>
+          <div className='col-lg-2 mt-2'>
             <DateTimePicker
               handleChange={this.handleDateChange}
               startDate={startDate}
@@ -169,7 +169,7 @@ class TestActions extends React.Component {
               name='dateOfBirth'
             />
           </div>
-          <div className='col-xl-3 mt-2'>
+          <div className='col-lg-3 mt-4'>
             <h4 className='ml-3'>{startDate.toDateString()}</h4>
           </div>
         </div>
@@ -184,7 +184,7 @@ class TestActions extends React.Component {
             </Button>
           </div>
         </div>
-        <div className='row'>
+        <div className='row mt-3'>
           <Accordion title='Test number One'>
             <div className='row'>
               Row One

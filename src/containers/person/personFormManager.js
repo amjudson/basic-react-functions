@@ -20,18 +20,24 @@ class PersonFormManager extends React.Component {
     this.state = { person: {} };
   };
 
+  static getDerivedStateFromProps(props, state) {
+    if (props === undefined || props === null || props.person === undefined || props.person === null) {
+      return state;
+    }
+
+    if (
+      (Object.entries(state).length > 0 && state.constructor === Object)
+      && (props.person.personId !== state.person.personId)) {
+      return state.person = Object.assign({}, props.person);
+    }
+
+    return state;
+  }
+
   componentDidMount() {
     this.props.dispatch(personActions.getPersonById(this.props.match.params.id));
     // this.setState({ person: this.props.person });
     // console.log('Did Mount:', this.state.person);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (Object.keys(this.props.person) === 0) {
-      this.setState({ person: nextProps.person });
-    } else {
-      this.setState({ person: this.props.person });
-    }
   }
 
   setStartDatetime(startDate) {

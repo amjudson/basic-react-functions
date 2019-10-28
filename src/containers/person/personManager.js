@@ -11,7 +11,7 @@ class PersonManager extends React.Component {
     this.getPersonData = this.getPersonData.bind(this);
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch(actions.loadPersons());
   }
 
